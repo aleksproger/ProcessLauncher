@@ -11,13 +11,13 @@ let package = Package(
         .library(name: "ProcessLauncherTestKit", targets: ["ProcessLauncherTestKit"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/aleksproger/TimeoutStrategy.git", .upToNextMinor(from: "1.0.0")),
-        .package(url: "https://github.com/aleksproger/RetryStrategies.git", .upToNextMinor(from: "1.0.0")),
+        .package(url: "https://github.com/aleksproger/timeout-strategy.git", .upToNextMinor(from: "1.0.0")),
+        .package(url: "https://github.com/aleksproger/retry-strategies.git", .upToNextMinor(from: "1.0.0")),
     ],
     targets: [
         .target(name: "ProcessLauncher", dependencies: [
-            "RetryStrategies",
-            .product(name: "TimeoutStrategy", package: "TimeoutStrategy")
+            .product(name: "RetryStrategiesTestKit", package: "retry-strategies"),
+            .product(name: "TimeoutStrategy", package: "timeout-strategy")
         ]),
 
         .target(name: "ProcessLauncherTestKit", dependencies: ["ProcessLauncher"]),
@@ -25,8 +25,8 @@ let package = Package(
         .testTarget(name: "ProcessLauncherTests", dependencies: [
             "ProcessLauncher",
             "ProcessLauncherTestKit",
-            .product(name: "RetryStrategiesTestKit", package: "RetryStrategies"),
-            .product(name: "TimeoutStrategyTestKit", package: "TimeoutStrategy")
+            .product(name: "RetryStrategiesTestKit", package: "retry-strategies"),
+            .product(name: "TimeoutStrategyTestKit", package: "timeout-strategy")
         ]),
     ]
 )

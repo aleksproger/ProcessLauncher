@@ -3,7 +3,7 @@
     "pins": [
       {
         "package": "RetryStrategies",
-        "repositoryURL": "git@github.com:aleksproger/RetryStrategies.git",
+        "repositoryURL": "https://github.com/aleksproger/retry-strategies.git",
         "state": {
           "branch": null,
           "revision": "e3e63408cc1f80fddc23ea27f5239ee58decf108",
@@ -12,7 +12,7 @@
       },
       {
         "package": "TimeoutStrategy",
-        "repositoryURL": "https://github.com/aleksproger/TimeoutStrategy.git",
+        "repositoryURL": "https://github.com/aleksproger/timeout-strategy.git",
         "state": {
           "branch": null,
           "revision": "2867d790a84a6123cf560f540170f5b8520eb1c9",
